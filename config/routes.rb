@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  get 'register/index'
+
+  get 'register/confirm'
+
+  get 'register/complete'
+
+  get 'login/index'
+
+  get 'user/index'
+
+  get 'user/show'
+
+  get 'theme/index'
+
+  get 'theme/show'
+
+  get 'home/index'
+
+  get 'home/about'
+
+  get 'home/terms'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
