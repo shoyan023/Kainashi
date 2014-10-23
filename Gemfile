@@ -31,6 +31,11 @@ group :development do
   gem "better_errors"
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 #ユーザー作成、認証用のgem
 gem 'devise'
 
