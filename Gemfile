@@ -26,9 +26,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+#error表示を綺麗にするgem
 group :development do
   gem "better_errors"
 end
+
+#ユーザー作成、認証用のgem
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
