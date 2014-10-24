@@ -1,2 +1,23 @@
 <h1>Theme#show</h1>
 <p>Find me in app/views/theme/show.html.erb</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @themes.name %>
+</p>
+
+<% @posts.each do |post| %>
+  <h3><%= post.content %></h3>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for(@post) do |f| %>
+
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

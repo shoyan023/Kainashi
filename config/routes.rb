@@ -8,19 +8,17 @@ Rails.application.routes.draw do
 
   get 'login/index'
 
-  get 'user/index'
-
-  get 'user/show'
-
-  get 'theme/index'
-
-  get 'theme/show'
-
   get 'home/index'
 
   get 'home/about'
 
   get 'home/terms'
+
+  resources :user
+  resources :theme
+  resources :posts
+
+  get 'theme/show/:id' => 'theme#show'
 
   root to: 'home#index'
 
