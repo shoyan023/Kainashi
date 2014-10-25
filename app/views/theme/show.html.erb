@@ -11,13 +11,4 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_for(@post) do |f| %>
-
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
