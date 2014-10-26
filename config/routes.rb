@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'star/index'
+
   devise_for :users
   get 'register/index'
 
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   resources :user
   resources :theme
   resources :posts
+  resources :star
 
   get 'theme/show/:id' => 'theme#show'
 

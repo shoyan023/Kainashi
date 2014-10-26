@@ -6,9 +6,21 @@
   <%= @themes.name %>
 </p>
 
-<% @posts.each do |post| %>
+<% @themes.posts.each do |post| %>
   <h3><%= post.content %></h3>
+  <p><%= post.user.username %></p>
+
+  <%= form_for(@star) do |f| %>
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+    <%= f.label :post_id %><br>
+    <%= f.number_field :post_id %>
+    <%= f.submit %>
+  <% end %>
+
 <% end %>
+
+
 
 <h2>Add a comment:</h2>
 <%= render 'form' %>
