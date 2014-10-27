@@ -1,5 +1,6 @@
 class StarsController < ApplicationController
 
+  before_filter :authenticate_user!, :except => [:show, :index]  
 
   def index
     @themes = Theme.find(1)
@@ -13,7 +14,6 @@ class StarsController < ApplicationController
     @themes = Theme.find(params[:id])
     @posts = @themes.posts
     @star = Star.new  #新規ファボ作成
-    @posts.id = "id"
   end
 
   def create
