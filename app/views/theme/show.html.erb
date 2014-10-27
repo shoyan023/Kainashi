@@ -9,14 +9,15 @@
 <% @themes.posts.each do |post| %>
   <h3><%= post.content %></h3>
   <p><%= post.user.username %></p>
+  <p><%= post.id %></p>
 
-  <%= form_for(@star) do |f| %>
-    <%= f.label :user_id %><br>
+  <%= form_for @star do |f| %>
+    <%= f.hidden_field :post_id, value: post.id %>
+    <%= f.label :user_id, "userid" %><br>
     <%= f.number_field :user_id %>
-    <%= f.label :post_id %><br>
-    <%= f.number_field :post_id %>
     <%= f.submit %>
   <% end %>
+
 
 <% end %>
 

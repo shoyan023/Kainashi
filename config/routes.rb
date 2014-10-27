@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'star/index'
-
   devise_for :users
   get 'register/index'
 
@@ -19,11 +17,13 @@ Rails.application.routes.draw do
   resources :user
   resources :theme
   resources :posts
-  resources :star
+  resources :stars
 
   get 'theme/show/:id' => 'theme#show'
 
   root to: 'home#index'
+
+  match 'toggle_star', :to => 'toggle_star#toggle_star', :via => [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
