@@ -1,6 +1,6 @@
 class StarsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:show, :index]  
+  before_filter :authenticate_user!, :except => [:show, :index]
 
   def index
     @themes = Theme.find(1)
@@ -29,6 +29,6 @@ class StarsController < ApplicationController
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def star_params
-      params.require(:star).permit(:user_id, :post_id)
+      params.require(:star).permit(:user_id, :post_id, :current_user_id)
     end
 end
