@@ -14,7 +14,9 @@
   <%= form_for @star, :remote => true do |f| %>
     <%= f.hidden_field :post_id, value: post.id %>
     <%= f.hidden_field :user_id, value: post.user.id %>
+    <% if current_user.present? %>
     <%= f.hidden_field :current_user_id, value: current_user.id %>
+    <% end %>
     <%= f.submit %>
   <% end %>
 
