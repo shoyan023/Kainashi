@@ -3,13 +3,8 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 
-   <div class="form-group required">
-       <%= f.label :username %>
-       <%= f.text_field :username, autofocus: true, :class => 'form-control' %>
-   </div>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+<p><%= f.label :login %><br />
+<%= f.text_field :login %></p>
 
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
