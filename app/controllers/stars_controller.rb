@@ -4,16 +4,10 @@ class StarsController < ApplicationController
 
   def index
     @themes = Theme.find(1)
-    if authenticate_user!
-      @current_user_id = "noname"
-    end
   end
 
   def show
     @themes = Theme.find(1)
-    if @current_user = []
-      @current_user = ["id" => 0]
-    end
   end
 
   def new
