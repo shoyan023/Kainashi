@@ -25,6 +25,10 @@ class StarsController < ApplicationController
     end
   end
 
+  def destroy
+    @star.destroy
+  end
+
     private
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
