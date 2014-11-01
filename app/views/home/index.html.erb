@@ -1,8 +1,22 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
 
-<% @themes.each do |theme| %>
-<h3><%= theme.name %></h3>
+<h3>投稿日時：<%= @themes.posted_at %></h3>
+<h2>テーマの名前：<%= @themes.name %></h2>
+<%= render partial: 'layouts/form' %>
+<br>
+<% @themes.posts.each do |post| %>
+<%= post.user.username %>
+<%= post.content %>
+<%= post.stars.count %>
+  <%= form_for @star, :remote => true do |f| %>
+    <%= f.hidden_field :post_id, value: post.id %>
+    <%= f.hidden_field :user_id, value: post.user.id %>
+    <% if current_user.present? %>
+      <%= f.hidden_field :current_user_id, value: current_user.id %>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
+
+<br>
 <% end %>
-
 
