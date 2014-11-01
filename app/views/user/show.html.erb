@@ -1,5 +1,9 @@
 <h1>User#show</h1>
 
+<% if current_user == @users %>
+  <%= link_to 'アカウント管理', edit_user_registration_path %>
+<% end %>
+
 <h2><%= @users.username %></h2>
 <p>POST : <%= @users.posts.count %></p>
 <p>FAV : <%= @users.stars.count %></p>
@@ -8,4 +12,8 @@
   <h2><%= link_to post.theme.name, theme_path(post.theme) %></h2>
   <p>FAV : <%= post.stars.count %></p>
   <h3><%= post.content %></h3>
+  <% if current_user == @users %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 <% end %>
