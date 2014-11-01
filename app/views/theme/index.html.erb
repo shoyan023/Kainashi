@@ -1,6 +1,8 @@
 <h1>Theme#index</h1>
-<p>Find me in app/views/theme/index.html.erb</p>
 
 <% @themes.each do |theme| %>
-  <h3><%= theme.name %>
+
+  <h3><%= theme.posted_at %></h3>
+  <h2><%= link_to theme.name, theme_path(theme.id) %></h2>
+  <p>Posts : <%= theme.posts.count %></p>
 <% end %>

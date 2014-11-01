@@ -1,2 +1,11 @@
 <h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+
+<h2><%= @users.username %></h2>
+<p>POST : <%= @users.posts.count %></p>
+<p>FAV : <%= @users.stars.count %></p>
+<% @users.posts.each do |post| %>
+  <p><%= post.updated_at %></p>
+  <h2><%= link_to post.theme.name, theme_path(post.theme) %></h2>
+  <p>FAV : <%= post.stars.count %></p>
+  <h3><%= post.content %></h3>
+<% end %>

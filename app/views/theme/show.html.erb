@@ -1,15 +1,16 @@
 <h1>Theme#show</h1>
 <p>Find me in app/views/theme/show.html.erb</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @themes.name %>
-</p>
+  <h3><%= @themes.posted_at %></h3>
+  <h2><%= @themes.name %></h2>
+
+  <h2>Add a comment:</h2>
+<%= render partial: 'layouts/form' %>
 
 <% @themes.posts.each do |post| %>
-  <h3><%= post.content %></h3>
-  <p><%= post.user.username %></p>
-  <p><%= post.id %></p>
+  <p><%= post.content %></p>
+  <p>username : <%= link_to post.user.username, user_path(post.user) %></p>
+  <p>fav : <%= post.stars.count %></p>
 
   <%= form_for @star, :remote => true do |f| %>
     <%= f.hidden_field :post_id, value: post.id %>
@@ -20,10 +21,4 @@
     <%= f.submit %>
   <% end %>
 
-
 <% end %>
-
-
-
-<h2>Add a comment:</h2>
-<%= render partial: 'layouts/form' %>
