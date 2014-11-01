@@ -1,6 +1,6 @@
 class ThemeController < ApplicationController
   def index
-    @themes = Theme.all
+    @themes = Theme.all.reverse_order
   end
 
   def show

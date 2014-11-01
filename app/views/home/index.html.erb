@@ -5,7 +5,7 @@
 <%= render partial: 'layouts/form' %>
 <br>
 <% @themes.posts.each do |post| %>
-<%= post.user.username %>
+<%= link_to post.user.username, user_path(post.user) %>
 <%= post.content %>
 <%= post.stars.count %>
   <%= form_for @star, :remote => true do |f| %>
