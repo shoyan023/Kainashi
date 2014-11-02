@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'register/index'
-
-  get 'register/confirm'
-
-  get 'register/complete'
-
-  get 'login/index'
-
   get 'home/index'
 
   get 'home/about'
