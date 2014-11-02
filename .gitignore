@@ -15,5 +15,7 @@
 /log/*.log
 /tmp
 
+#Ignore config files.
 config/environment.rb
 config/database.yml
+config/secrets.yml
