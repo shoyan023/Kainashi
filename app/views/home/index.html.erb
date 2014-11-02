@@ -1,22 +1,51 @@
-<h1>Home#index</h1>
+<div class="wrapper">
+  <div class="top">
+  <div class="top_image">
+    <img src="images/logo.jpg" class="logo">
+    <p class="text1">１日ひとつ、考えるテーマを提供するメールマガジン。</p>
+    <p class="text2">あなたの考えを保存し、様々な考えに触れるWebサイト。</p>
+    <a href="" class="start">はじめる（無料）</a>
+  </div>
+  </div>
 
-<h3>投稿日時：<%= @themes.posted_at %></h3>
-<h2>テーマの名前：<%= @themes.name %></h2>
-<%= render partial: 'layouts/form' %>
-<br>
-<% @themes.posts.each do |post| %>
-<%= link_to post.user.username, user_path(post.user) %>
-<%= post.content %>
-<%= post.stars.count %>
-  <%= form_for @star, :remote => true do |f| %>
+  <div class="sec1">
+    <div class="sec1_wrapper">
+      <!-- get the theme of the day -->
+      <p><%= @themes.posted_at %></p>
+      <h1><%= @themes.name %></h1>
+
+      <!-- post form the day -->
+      <%= render partial: 'layouts/form' %>
+
+      <ul class="sort">
+        <li><a href="" >投稿順</a></li>
+        <li> | </li>
+        <li><a href="" >人気順</a></li>
+      </ul>
+      <hr class="line_main">
+
+      <% @themes.posts.each do |post| %>
+      <!-- repeat 10 posts to the themes of the day -->
+      <ul class="posts">
+        <li>
+          <p class="number">
+            <%= link_to post.user.username, user_path(post.user) %>
+            <img src="like画像呼び出し">  <%= form_for @star, :remote => true do |f| %>
     <%= f.hidden_field :post_id, value: post.id %>
     <%= f.hidden_field :user_id, value: post.user.id %>
     <% if current_user.present? %>
       <%= f.hidden_field :current_user_id, value: current_user.id %>
     <% end %>
     <%= f.submit %>
-  <% end %>
+     <% end %><%= post.stars.count %>
+          </p>
+          <p class="content"><%= post.content %></p>
+        </li>
+      </ul>
+      <hr>
+      <% end %>
+      <!-- end of the repeat -->
+    </div>
 
-<br>
-<% end %>
-
+  </div>
+</div>

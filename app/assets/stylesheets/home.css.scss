@@ -1,3 +1,222 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* line 11, ../scss/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+/* line 17, ../scss/style.scss */
+.header_wrapper {
+  height: 60px;
+  width: 100%;
+  z-index: 15;
+  background-color: #3a204c;
+}
+
+/* line 23, ../scss/style.scss */
+.header {
+  margin: 0 auto;
+  width: 1500px;
+  overflow: hidden;
+}
+/* line 27, ../scss/style.scss */
+.header .logo {
+  float: left;
+  margin: 10px 0 0 30px;
+}
+/* line 30, ../scss/style.scss */
+.header .logo img {
+  width: 40px;
+  height: 40px;
+}
+/* line 35, ../scss/style.scss */
+.header ul {
+  float: right;
+  position: absolute;
+  right: 0;
+}
+/* line 39, ../scss/style.scss */
+.header ul li {
+  float: left;
+  display: block;
+  font-size: 18px;
+  margin: 0;
+}
+/* line 44, ../scss/style.scss */
+.header ul li .link {
+  margin: 0 30px 20px 0;
+  color: #fcfbef;
+  display: block;
+  padding: 3px 15px 0 15px;
+  text-decoration: none;
+}
+/* line 51, ../scss/style.scss */
+.header ul li .link:hover {
+  background-color: #f3c363;
+  color: #3a204c;
+}
+/* line 55, ../scss/style.scss */
+.header ul li .button_login {
+  display: inline-block;
+  padding: 3px 40px;
+  margin: 0 60px 0 0;
+  color: #fcfbef;
+  text-decoration: none;
+  font-size: 12px;
+  border: solid 1px #fcfbef;
+  border-radius: 30px;
+}
+/* line 65, ../scss/style.scss */
+.header ul li .button_login:hover {
+  color: #3a204c;
+  background-color: #fcfbef;
+}
+
+/* header ends */
+/* home style */
+/* top style */
+/* line 78, ../scss/style.scss */
+.top {
+  width: 100%;
+  height: 700px;
+  background-color: rgba(58, 32, 76, 0.5);
+  background: url(IMG_0280.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 85, ../scss/style.scss */
+.top .top_image {
+  background-color: rgba(58, 32, 76, 0.5);
+  width: 100%;
+  height: 700px;
+}
+/* line 90, ../scss/style.scss */
+.top .logo {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  margin: 60px 0 30px -120px;
+  left: 50%;
+}
+/* line 97, ../scss/style.scss */
+.top p {
+  color: #fcfbef;
+  font-size: 16px;
+  text-align: center;
+}
+/* line 102, ../scss/style.scss */
+.top a {
+  padding: 3px 40px;
+  color: #fcfbef;
+  text-decoration: none;
+  font-size: 18px;
+  border: solid 2px #fcfbef;
+  position: absolute;
+  margin: 70px 0 0 -125px;
+  left: 50%;
+}
+/* line 112, ../scss/style.scss */
+.top a:hover {
+  color: #3a204c;
+  background-color: #fcfbef;
+}
+
+/* sec1 style */
+/* line 119, ../scss/style.scss */
+.sec1 {
+  margin: 0;
+  background-color: #fcfbef;
+}
+/* line 122, ../scss/style.scss */
+.sec1 .sec1_wrapper {
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+/* line 126, ../scss/style.scss */
+.sec1 .sec1_wrapper p {
+  text-align: center;
+  color: #474747;
+  font-size: 40px;
+  margin: 0;
+  padding-top: 30px;
+}
+/* line 133, ../scss/style.scss */
+.sec1 .sec1_wrapper h1 {
+  text-align: center;
+  color: #474747;
+  font-size: 40px;
+  margin: 0;
+  padding-top: 30px;
+}
+/* line 140, ../scss/style.scss */
+.sec1 .sec1_wrapper textarea {
+  width: 900px;
+  height: 50px;
+  resize: none;
+  background-color: #fcfbef;
+  position: relative;
+  margin: 60px 0 30px 50%;
+  left: -450px;
+}
+/* line 150, ../scss/style.scss */
+.sec1 .sec1_wrapper .post {
+  padding: 15px 40px;
+  background-color: #f3c363;
+  text-decoration: none;
+  font-size: 18px;
+  color: #3a204c;
+  margin: 0 45%;
+  border-radius: 2px;
+}
+/* line 159, ../scss/style.scss */
+.sec1 .sec1_wrapper .post:hover {
+  background-color: #d9af59;
+}
+/* line 162, ../scss/style.scss */
+.sec1 .sec1_wrapper .sort {
+  position: relative;
+  text-align: center;
+}
+/* line 165, ../scss/style.scss */
+.sec1 .sec1_wrapper .sort li {
+  display: inline-block;
+  margin: 30px 0 0 0;
+}
+/* line 168, ../scss/style.scss */
+.sec1 .sec1_wrapper .sort li a {
+  color: #474747;
+  text-decoration: none;
+}
+/* line 175, ../scss/style.scss */
+.sec1 .sec1_wrapper .posts li {
+  display: inline;
+}
+/* line 177, ../scss/style.scss */
+.sec1 .sec1_wrapper .posts li a {
+  color: #474747;
+  font-size: 12px;
+}
+/* line 181, ../scss/style.scss */
+.sec1 .sec1_wrapper .posts li img {
+  width: 20px;
+  height: 20px;
+}
+/* line 185, ../scss/style.scss */
+.sec1 .sec1_wrapper .posts li .number {
+  color: #474747;
+  font-size: 16px;
+  text-align: left;
+}
+/* line 190, ../scss/style.scss */
+.sec1 .sec1_wrapper .posts li .content {
+  color: #474747;
+  font-size: 16px;
+  text-align: left;
+  margin: 0 40px 40px 0;
+  letter-spacing: 2px;
+}
