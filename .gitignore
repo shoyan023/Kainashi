@@ -19,3 +19,4 @@
 config/environment.rb
 config/database.yml
 config/secrets.yml
+config/testdayo.yml
