@@ -1,31 +1,35 @@
-<div class="content col-md-offset-3 col-md-6">
-   <h2 class="page-header">Sign up</h2>
- 
+  <div class="sec6">
+  <div class="register_bg">
+  <div class="register_wrapper">
+    <p class="page_title">REGISTER</p>
+    <p class="register_navi">登録はメールアドレスのみ。今すぐ思考の旅に出かけよう。</p>
+
    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
    <%= devise_error_messages! %>
- 
-   <div class="form-group required">
-       <%= f.label :username %>
-       <%= f.text_field :username, autofocus: true, :class => 'form-control' %>
-   </div>
-   <div class="form-group required">
-       <%= f.label :email %>
-       <%= f.email_field :email, :class => 'form-control' %>
-   </div>
-   <div class="form-group required">
-       <%= f.label :password %>
-       <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
-   </div>
-   <div>
-       <%= f.label :password_confirmation %>
-       <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control' %>
-   </div>
- 
-   <br />
- 
-   <%= f.submit "Sign up", :class => 'btn btn-primary' %>
+
+  <ul>
+    <li>
+       <span><%= f.label :EMAIL %></span>
+       <%= f.text_field :username, autofocus: true, :class => 'form' %>
+   </li>
+   <li>
+       <span><%= f.label :NAME %></span>
+       <%= f.email_field :email, :class => 'form' %>
+   </li>
+   <li>
+       <span><%= f.label :password %></span>
+       <%= f.password_field :password, autocomplete: "off", :class => 'form' %>
+   </li>
+   <li>
+       <span><%= f.label :CONFIRM %></span>
+       <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form' %>
+   </li>
+
+    <div class="other_features">
+    <p class="agreement"><input type="checkbox"><a href="" class="agreement_link">利用規約</a>に同意する</p>
+
+   <%= f.submit "はじめる（無料）", :class => 'button button_register' %>
+    </div>
    <% end %>
- 
-   <%= render "devise/shared/links" %>
- 
+
 </div>

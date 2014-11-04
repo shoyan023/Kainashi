@@ -7,26 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <nav>
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if user_signed_in? %> 
-      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-      <!-- *_path はUserモデルを作成したときに、
-        deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'マイページ', user_path(current_user.id) %> |
-      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
+<header class="header_wrapper" id="headerWrapper">
+  <nav class="header">
+
+    <a href= "/" class="logo"><img src="/" ></a>
+
+    <ul class="nav">
+      <li class="how_to"><a href="" class="link">HOW TO</a></li>
+      <li class="titles"><a href="/theme" class="link">THEMES</a></li>
+      <% if user_signed_in? %>
+      <li class="login button_login"><a href="<%= user_path(current_user.id) %>" class="button_login"><%= current_user.username %></a></li>
+
+      <%= link_to 'マイページ', user_path(current_user.id) %>
+      <%= link_to 'プロフィール変更', edit_user_registration_path %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+
     <% else %>
-      <%= link_to "サインイン", new_user_registration_path %> |
+      <%= link_to "サインアップ", new_user_registration_path %> |
       <%= link_to "ログイン", new_user_session_path %>
     <% end %>
+    </ul>
   </nav>
 </header>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
 <%= yield %>
 

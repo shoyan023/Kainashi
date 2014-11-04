@@ -4,7 +4,9 @@
     <img src="images/logo.jpg" class="logo">
     <p class="text1">１日ひとつ、考えるテーマを提供するメールマガジン。</p>
     <p class="text2">あなたの考えを保存し、様々な考えに触れるWebサイト。</p>
-    <a href="" class="start">はじめる（無料）</a>
+    <% if current_user == @users %>
+    <p class="button_start"><a href="<%= new_user_registration_path %>" class="start">はじめる（無料）</a></p>
+    <% end %>
   </div>
   </div>
 
@@ -22,27 +24,26 @@
         <li> | </li>
         <li><a href="" >人気順</a></li>
       </ul>
-      <hr class="line_main">
 
-      <% @themes.posts.each do |post| %>
       <!-- repeat 10 posts to the themes of the day -->
+      <% @themes.posts.each do |post| %>
       <ul class="posts">
         <li>
-          <p class="number">
+          <p class="like">
             <%= link_to post.user.username, user_path(post.user) %>
-            <img src="like画像呼び出し">  <%= form_for @star, :remote => true do |f| %>
+            <%= form_for @star, :remote => true do |f| %>
     <%= f.hidden_field :post_id, value: post.id %>
     <%= f.hidden_field :user_id, value: post.user.id %>
     <% if current_user.present? %>
       <%= f.hidden_field :current_user_id, value: current_user.id %>
     <% end %>
-    <%= f.submit %>
+
+     <%= image_submit_tag("like_button.png", class: 'img_fav') %>
      <% end %><%= post.stars.count %>
           </p>
           <p class="content"><%= post.content %></p>
         </li>
       </ul>
-      <hr>
       <% end %>
       <!-- end of the repeat -->
     </div>

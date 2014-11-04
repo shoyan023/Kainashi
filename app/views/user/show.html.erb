@@ -1,19 +1,41 @@
-<h1>User#show</h1>
+  <div class="sec4_wrapper">
+    <% if current_user == @users %>
+      <%= link_to 'アカウント管理', edit_user_registration_path, :class => 'manage' %>
+    <% end %>
+     <p class="username"><%= @users.username %></p>
+     <p class="navi">さんのマイページ</p>
+     <table>
+       <tr>
+         <th>POST</th>
+         <th>LIKE</th>
+       </tr>
+       <tr>
+         <td><%= @users.posts.count %></td>
+         <td><%= @users.stars.count %></td>
+       </tr>
+     </table>
 
-<% if current_user == @users %>
-  <%= link_to 'アカウント管理', edit_user_registration_path %>
-<% end %>
-
-<h2><%= @users.username %></h2>
-<p>POST : <%= @users.posts.count %></p>
-<p>FAV : <%= @users.stars.count %></p>
 <% @users.posts.each do |post| %>
-  <p><%= post.updated_at %></p>
-  <h2><%= link_to post.theme.name, theme_path(post.theme) %></h2>
-  <p>FAV : <%= post.stars.count %></p>
-  <h3><%= post.content %></h3>
+  <p class="date"><%= post.updated_at %></p>
+  <p class="title"><%= link_to post.theme.name, theme_path(post.theme) %></p>
+          <p class="like">
+           <%= form_for @star, :remote => true do |f| %>
+    <%= f.hidden_field :post_id, value: post.id %>
+    <%= f.hidden_field :user_id, value: post.user.id %>
+    <% if current_user.present? %>
+      <%= f.hidden_field :current_user_id, value: current_user.id %>
+    <% end %>
+    <%= image_submit_tag("like_button.png", class: 'img_fav') %>
+     <% end %><%= post.stars.count %>
+          </p>
+  <p class="content"><%= post.content %></p>
   <% if current_user == @users %>
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 <% end %>
+    </div>
+
+  </div>
+</div>
+</div>

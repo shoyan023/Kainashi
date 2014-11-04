@@ -1,8 +1,20 @@
-<h1>Theme#index</h1>
-
-<% @themes.each do |theme| %>
-
-  <h3><%= theme.posted_at %></h3>
-  <h2><%= link_to theme.name, theme_path(theme.id) %></h2>
-  <p>Posts : <%= theme.posts.count %></p>
-<% end %>
+  <div class="sec2">
+    <div class="sec2_wrapper">
+    <p class="page_title">THEMES</p>
+    <!-- each do で繰り返す　-->
+    <% @themes.each do |theme| %>
+    <ul class="themes">
+      <li>
+        <div class="date_box">
+        <p class="date"><%= theme.posted_at %></p><!--日付取得 -->
+        </div>
+        <div class="theme_box">
+        <h1 class="theme"><%= link_to theme.name, theme_path(theme.id) %></h1>
+        </div>
+        <p class="post_number"><%= theme.posts.count %> POSTS</p>
+      </li>
+    </ul>
+    <% end %>
+    <!-- end of the repeat -->
+  </div>
+  </div>
