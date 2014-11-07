@@ -15,25 +15,32 @@
        </tr>
      </table>
 
+<ul class="posts">
+<li>
 <% @users.posts.each do |post| %>
   <p class="date"><%= post.updated_at %></p>
   <p class="title"><%= link_to post.theme.name, theme_path(post.theme) %></p>
-          <p class="like">
+  <p class="like">
            <%= form_for @star, :remote => true do |f| %>
-    <%= f.hidden_field :post_id, value: post.id %>
-    <%= f.hidden_field :user_id, value: post.user.id %>
-    <% if current_user.present? %>
-      <%= f.hidden_field :current_user_id, value: current_user.id %>
-    <% end %>
-    <%= image_submit_tag("like_button.png", class: 'img_fav') %>
-     <% end %><%= post.stars.count %>
-          </p>
+             <%= f.hidden_field :post_id, value: post.id %>
+             <%= f.hidden_field :user_id, value: post.user.id %>
+             <% if current_user.present? %>
+               <%= f.hidden_field :current_user_id, value: current_user.id %>
+             <% end %>
+             <%= image_submit_tag("like_button.png", class: "img_fav") %>
+           <% end %><%= post.stars.count %>
+    </p>
   <p class="content"><%= post.content %></p>
   <% if current_user == @users %>
-    <%= link_to 'Edit', edit_post_path(post) %>
-    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <p class="edit">
+    <%= link_to '編集', edit_post_path(post) %> |
+    <%= link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
   <% end %>
 <% end %>
+</li>
+
+</ul>
     </div>
 
   </div>

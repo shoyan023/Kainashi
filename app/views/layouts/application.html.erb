@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Kainashi</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,16 +17,21 @@
       <li class="how_to"><a href="" class="link">HOW TO</a></li>
       <li class="titles"><a href="/theme" class="link">THEMES</a></li>
       <% if user_signed_in? %>
-      <li class="login button_login"><a href="<%= user_path(current_user.id) %>" class="button_login"><%= current_user.username %></a></li>
-
-      <%= link_to 'マイページ', user_path(current_user.id) %>
-      <%= link_to 'プロフィール変更', edit_user_registration_path %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-
-    <% else %>
-      <%= link_to "サインアップ", new_user_registration_path %> |
-      <%= link_to "ログイン", new_user_session_path %>
-    <% end %>
+      <li class="login button_login"><a href="<%= user_path(current_user.id) %>" class="button_login"><%= current_user.username %></a>
+          <ul class="hidden_list">
+            <li><%= link_to 'マイページ', user_path(current_user.id), class: "hidden_link" %></li>
+            <li><%= link_to 'プロフィール変更', edit_user_registration_path, class: "hidden_link" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "hidden_link" %></li>
+          </ul>
+      </li>
+      <% else %>
+        <li class="login button_login"><p class="button_login">SIGN IN / LOGIN</p>
+          <ul class="hidden_list">
+            <li><%= link_to "サインアップ", new_user_registration_path, class: "hidden_link" %></li>
+            <li><%= link_to "ログイン", new_user_session_path, class: "hidden_link" %></li>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </nav>
 </header>

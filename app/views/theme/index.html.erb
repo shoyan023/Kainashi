@@ -9,7 +9,7 @@
         <p class="date"><%= theme.posted_at %></p><!--日付取得 -->
         </div>
         <div class="theme_box">
-        <h1 class="theme"><%= link_to theme.name, theme_path(theme.id) %></h1>
+        <h1 class="theme"><%= link_to theme.name, theme_path(theme.id), class: "theme"%></h1>
         </div>
         <p class="post_number"><%= theme.posts.count %> POSTS</p>
       </li>

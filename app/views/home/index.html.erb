@@ -4,7 +4,7 @@
     <img src="images/logo.jpg" class="logo">
     <p class="text1">１日ひとつ、考えるテーマを提供するメールマガジン。</p>
     <p class="text2">あなたの考えを保存し、様々な考えに触れるWebサイト。</p>
-    <% if current_user == @users %>
+     <% if current_user == @users %>
     <p class="button_start"><a href="<%= new_user_registration_path %>" class="start">はじめる（無料）</a></p>
     <% end %>
   </div>
@@ -13,8 +13,9 @@
   <div class="sec1">
     <div class="sec1_wrapper">
       <!-- get the theme of the day -->
-      <p><%= @themes.posted_at %></p>
       <h1><%= @themes.name %></h1>
+      <p><%= @themes.posted_at %></p>
+      
 
       <!-- post form the day -->
       <%= render partial: 'layouts/form' %>
@@ -30,16 +31,16 @@
       <ul class="posts">
         <li>
           <p class="like">
-            <%= link_to post.user.username, user_path(post.user) %>
+          <%= link_to post.user.username, user_path(post.user) %>
             <%= form_for @star, :remote => true do |f| %>
-    <%= f.hidden_field :post_id, value: post.id %>
-    <%= f.hidden_field :user_id, value: post.user.id %>
-    <% if current_user.present? %>
-      <%= f.hidden_field :current_user_id, value: current_user.id %>
-    <% end %>
-
-     <%= image_submit_tag("like_button.png", class: 'img_fav') %>
-     <% end %><%= post.stars.count %>
+            <%= f.hidden_field :post_id, value: post.id %>
+            <%= f.hidden_field :user_id, value: post.user.id %>
+              <% if current_user.present? %>
+                <%= f.hidden_field :current_user_id, value: current_user.id %>
+              <% end %>
+              <%= image_submit_tag("like_button.png", class: 'img_fav') %>
+          <% end %>
+          <%= post.stars.count %>
           </p>
           <p class="content"><%= post.content %></p>
         </li>
