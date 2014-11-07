@@ -10,14 +10,15 @@
   <ul>
     <li>
        <span><%= f.label :EMAIL %></span>
-       <%= f.text_field :username, autofocus: true, :class => 'form' %>
-   </li>
-   <li>
-       <span><%= f.label :NAME %></span>
        <%= f.email_field :email, :class => 'form' %>
    </li>
    <li>
-       <span><%= f.label :password %></span>
+       <span><%= f.label :NAME %></span>
+       <%= f.text_field :username, autofocus: true, :class => 'form' %>
+       
+   </li>
+   <li>
+       <span><%= f.label :PASSWORD %></span>
        <%= f.password_field :password, autocomplete: "off", :class => 'form' %>
    </li>
    <li>
@@ -27,8 +28,7 @@
 
     <div class="other_features">
     <p class="agreement"><input type="checkbox"><a href="" class="agreement_link">利用規約</a>に同意する</p>
-
-   <%= f.submit "はじめる（無料）", :class => 'button button_register' %>
+      <div class="button"><%= f.submit "はじめる（無料）", :class => 'button button_register' %></div>
     </div>
    <% end %>
 

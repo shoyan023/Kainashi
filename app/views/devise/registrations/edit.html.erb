@@ -1,63 +1,94 @@
+ <script language="javascript" type="text/javascript">
+
+      $(function(){
+        
+        $(".head_navi").on("click", "li",function() {
+          $("li.selected").removeClass("selected");
+          $(this).addClass("selected");
+
+          myID = this.id.split("_")[1];
+          $("h1").hide();
+          $("#head_" + myID).show();
+          $(".content_wrap").hide();
+          $("#content_" + myID).show();
+        })
+
+        $("#tab_1").trigger("click");
+              
+      })      
+    
+ </script>
+
+
   <div class="sec5_wrapper">
-    <h1>プロフィールを管理</h1>
+    <h1 id="head_1">プロフィールを管理</h1>
+    <h1 id="head_2">パスワードを変更</h1>
     <ul class="head_navi">
-      <li><a href="">プロフィール管理</a></li>
-      <li>|</li>
-      <li><a href="">パスワード変更</a></li>
-      <li>|</li>
-      <li><a href="">ログアウト</a></li>
+      <li id="tab_1" class="selected">プロフィール管理</li>
+      <li id="tab_2">パスワード変更</li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
     </ul>
-    <div class="content_wrap">
+    <div id="content_1" class="content_wrap">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
     <ul>
       <li>
-        <span><%= f.label :NAME %></span>
+        <span><%= f.label :ユーザーネーム %></span>
         <%= f.text_field :username, autofocus: true, :class => 'form' %>
       </li>
       <li>
-        <span><%= f.label :email %></span>
+        <span><%= f.label :メールアドレス %></span>
         <%= f.email_field :email, autofocus: true, :class => 'form' %>
       </li>
+      <li>
+        <span><%= f.label :パスワード %></span>
+        <%= f.password_field :current_password, autocomplete: "off", :class => 'form', :placeholder => "確認のためパスワードを入力してください" %>
+      </li>
     </ul>
+    <p class="delete_wrap"><%= link_to "アカウントを削除", registration_path(resource_name), data: { confirm: "本当にアカウントを削除しますか？" }, method: :delete, :class => 'delete_wrap delete', :class => "delete" %></p>
+    <p class="button"><%= f.submit "完了", :class => "button button_comp" %></p>
     </div>
-    <p class="button"><a href="" class="button_comp">完了</a></p>
-    <%= button_to "アカウントを削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'delete_wrap delete' %>
+
+
+  <!-- ここからcontent_2 -->
+  <div id="content_2" class="content_wrap">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+    <ul>
+      <li>
+        <span class="edit_pass"><%= f.label :現在のパスワード %></span>
+        <%= f.password_field :current_password, autocomplete: "off", :class => 'form' %>
+      </li>
+      <li>
+        <span class="edit_pass"><%= f.label :新しいパスワード %> </span>
+        <%= f.password_field :password, autocomplete: "off", :class => 'form' %>
+      </li>
+      <li>
+        <span class="edit_pass"><%= f.label :新しいパスワードを再入力 %></span>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form' %>
+      </li>
+    </ul>
+    <p class="button"><%= f.submit "完了", :class => "button button_comp" %></p>
+    </div>
+    
   </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+</div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<h2>パスワード</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Update" %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+<% end %>
+
+
