@@ -47,6 +47,7 @@
     </ul>
     <p class="delete_wrap"><%= link_to "アカウントを削除", registration_path(resource_name), data: { confirm: "本当にアカウントを削除しますか？" }, method: :delete, :class => 'delete_wrap delete', :class => "delete" %></p>
     <p class="button"><%= f.submit "完了", :class => "button button_comp" %></p>
+    <% end %>
     </div>
 
 
@@ -69,26 +70,19 @@
       </li>
     </ul>
     <p class="button"><%= f.submit "完了", :class => "button button_comp" %></p>
-    </div>
-    
+    <% end %>
   </div>
 
-</div>
-
-
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-<% end %>
-
 
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-<% end %>
+
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
 
 
