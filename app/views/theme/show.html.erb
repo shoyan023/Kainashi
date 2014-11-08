@@ -10,7 +10,6 @@
 
       <ul class="sort">
         <li><a href="" >投稿順</a></li>
-        <li> | </li>
         <li><a href="" >人気順</a></li>
       </ul>
 
@@ -18,17 +17,24 @@
       <% @themes.posts.each do |post| %>
       <ul class="posts">
         <li>
-          <p class="like">
-            <%= link_to post.user.username, user_path(post.user) %>
+          <ul class="like">
+          <li>
+          <%= link_to post.user.username, user_path(post.user) %>
+          </li>
+          <li>
             <%= form_for @star, :remote => true do |f| %>
-    <%= f.hidden_field :post_id, value: post.id %>
-    <%= f.hidden_field :user_id, value: post.user.id %>
-    <% if current_user.present? %>
-      <%= f.hidden_field :current_user_id, value: current_user.id %>
-    <% end %>
-    <%= image_submit_tag("like_button.png", class: 'img_fav') %>
-     <% end %><%= post.stars.count %>
-          </p>
+            <%= f.hidden_field :post_id, value: post.id %>
+            <%= f.hidden_field :user_id, value: post.user.id %>
+              <% if current_user.present? %>
+                <%= f.hidden_field :current_user_id, value: current_user.id %>
+              <% end %>
+              <%= image_submit_tag("like_button.png", class: 'img_fav') %>
+          <% end %>
+          </li>
+          <li>
+          <%= post.stars.count %>
+          </li>
+          </ul>
           <p class="content"><%= post.content %></p>
         </li>
       </ul>

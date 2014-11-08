@@ -29,11 +29,14 @@
       </ul>
 
       <!-- repeat 10 posts to the themes of the day -->
-      <% @themes.posts.each do |post| %>
       <ul class="posts">
+      <% @themes.posts.each do |post| %>
         <li>
-          <p class="like">
+          <ul class="like">
+          <li>
           <%= link_to post.user.username, user_path(post.user) %>
+          </li>
+          <li>
             <%= form_for @star, :remote => true do |f| %>
             <%= f.hidden_field :post_id, value: post.id %>
             <%= f.hidden_field :user_id, value: post.user.id %>
@@ -42,13 +45,15 @@
               <% end %>
               <%= image_submit_tag("like_button.png", class: 'img_fav') %>
           <% end %>
-
+          </li>
+          <li>
           <%= post.stars.count %>
-          </p>
+          </li>
+          </ul>
           <p class="content"><%= post.content %></p>
         </li>
+        <% end %>
       </ul>
-      <% end %>
       <!-- end of the repeat -->
     </div>
 
