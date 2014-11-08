@@ -4,9 +4,11 @@
     <img src="images/logo.jpg" class="logo">
     <p class="text1">１日ひとつ、考えるテーマを提供するメールマガジン。</p>
     <p class="text2">あなたの考えを保存し、様々な考えに触れるWebサイト。</p>
+    <div class="start_wrap">
      <% if current_user == @users %>
     <p class="button_start"><a href="<%= new_user_registration_path %>" class="start">はじめる（無料）</a></p>
     <% end %>
+    </div>
   </div>
   </div>
 
@@ -14,7 +16,7 @@
     <div class="sec1_wrapper">
       <!-- get the theme of the day -->
       <h1><%= @themes.name %></h1>
-      <p><%= @themes.posted_at %></p>
+      <p class="posted_at"><%= @themes.posted_at %></p>
       
 
       <!-- post form the day -->
@@ -40,6 +42,7 @@
               <% end %>
               <%= image_submit_tag("like_button.png", class: 'img_fav') %>
           <% end %>
+
           <%= post.stars.count %>
           </p>
           <p class="content"><%= post.content %></p>

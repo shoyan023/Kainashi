@@ -2,9 +2,7 @@
     <% if current_user == @users %>
       <%= link_to 'アカウント管理', edit_user_registration_path, :class => 'manage' %>
     <% end %>
-     <p class="username"><%= @users.username %></p>
-     <p class="navi">さんのマイページ</p>
-     <table>
+    <table>
        <tr>
          <th>POST</th>
          <th>LIKE</th>
@@ -14,6 +12,8 @@
          <td><%= @users.stars.count %></td>
        </tr>
      </table>
+     <p class="username"><%= @users.username %></p>
+     <p class="navi">さんのマイページ</p>
 
 <ul class="posts">
 <li>
