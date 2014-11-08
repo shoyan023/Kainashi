@@ -7,12 +7,12 @@
 <ul>
   <li>
     <span><%= f.label :"EMAIL/NAME" %></span>
-    <%= f.text_field :login, :class => 'form' %>
+    <%= f.text_field :login, :placeholder => 'ユーザー名かメールアドレスを入力してください', :class => 'form' %>
   </li>
 
   <li>
     <span><%= f.label :password %></span>
-    <%= f.password_field :password, autocomplete: "off", :class => 'form' %>
+    <%= f.password_field :password, :placeholder => 'パスワードを入力してください', autocomplete: "off", :class => 'form' %>
   </li>
 
   <% if devise_mapping.rememberable? -%>
