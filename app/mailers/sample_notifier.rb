@@ -8,6 +8,6 @@ class SampleNotifier < ActionMailer::Base
   def sample_mail
     @greeting = "Hi"
 
-    mail to: "noren.member@gmail.com", subject: "test mail"
+    mail to: "shoya.ono.meiji@gmail.com", subject: "success"
   end
 end
