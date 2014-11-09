@@ -29,8 +29,8 @@
       </ul>
 
       <!-- repeat 10 posts to the themes of the day -->
-      <ul class="posts">
       <% @themes.posts.each do |post| %>
+      <ul class="posts">
         <li>
           <ul class="like">
           <li>
@@ -52,8 +52,8 @@
           </ul>
           <p class="content"><%= post.content %></p>
         </li>
-        <% end %>
       </ul>
+      <% end %>
       <!-- end of the repeat -->
     </div>
 

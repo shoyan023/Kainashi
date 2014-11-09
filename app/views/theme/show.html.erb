@@ -3,13 +3,14 @@
       <p class="page_title">THEME</p>
       <!-- get the theme of the day -->
       <h1><%= @themes.name %></h1>
-      <p><%= @themes.posted_at %></p><!--日付取得 -->
+      <p class="posted_at"><%= @themes.posted_at %></p><!--日付取得 -->
 
       <!-- post form the day -->
       <%= render partial: 'layouts/form' %>
 
       <ul class="sort">
         <li><a href="" >投稿順</a></li>
+        <li>|</li>
         <li><a href="" >人気順</a></li>
       </ul>
 
