@@ -1,3 +1,16 @@
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".button_post").hide();
+    var flg = "close";
+    $(".field").click(function(){
+        $(".button_post").fadeIn();
+        if(flg == "close"){
+          flg = "open";
+        }
+    });
+});
+</script>
+
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -18,7 +31,7 @@
   <div class="field">
     <%= f.text_area :content, :placeholder => "自分の考えを投稿する。" %>
   </div>
-  <div class="button_post">
+  <div class="button_post" id="hidden_post">
     <%= f.submit "POST", :class => 'post' %>
   </div>
 <% end %>
