@@ -8,6 +8,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+    $(function(){
+        $("#acMenu").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+</script>
 </head>
 <body>
 <header class="header_wrapper" id="headerWrapper">
@@ -15,7 +22,7 @@
 
     <a href= "/" class="logo"><img src="/" ></a>
 
-    <ul class="nav">
+    <ul class="nav" id="acMenu">
       <li class="how_to"><a href="" class="link">HOW TO</a></li>
       <li class="titles"><a href="/theme" class="link">THEMES</a></li>
       <% if user_signed_in? %>

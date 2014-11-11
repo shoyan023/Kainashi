@@ -50,7 +50,7 @@
   /* header */
   /* line 8, ../scss/breakpoint/_768down.scss */
   .header_wrapper {
-    height: 40px;
+    height: 60px;
     width: 100%;
     z-index: 15;
     background-color: #3a204c;
@@ -232,7 +232,7 @@
   /* line 166, ../scss/breakpoint/_768down.scss */
   .sec1 {
     margin: 0;
-    background-color: #fcfbef;
+    background-color: #fbf7f1;
   }
   /* line 169, ../scss/breakpoint/_768down.scss */
   .sec1 .sec1_wrapper {
@@ -401,12 +401,12 @@
   .sec1 .sec1_wrapper .posts li .content {
     color: #474747;
     font-family: 'Yu Gothic';
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: left;
     margin: 20px 10px;
     padding: 0;
     letter-spacing: 2px;
-    line-height: 160%;
+    line-height: 170%;
   }
 
   /* sec2 style */
@@ -612,71 +612,69 @@
     margin: 0 auto 0 auto;
   }
   /* line 501, ../scss/breakpoint/_768down.scss */
+  .sec4_wrapper .for_mobile {
+    width: 90%;
+    text-align: center;
+  }
+  /* line 505, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .manage {
-    width: 100px;
     position: absolute;
-    padding: 15px 40px;
+    padding: 10px 20px;
     margin: 20px 0 90px -50px;
     left: 20%;
-    text-align: center;
     background-color: #f3c363;
     text-decoration: none;
     font-size: 12px;
     color: #3a204c;
     font-family: flop;
     border-radius: 2px;
-    border: 0;
-    transition: background-color 1s ease;
   }
   /* line 517, ../scss/breakpoint/_768down.scss */
-  .sec4_wrapper .manage:hover {
-    background-color: #d9af59;
-  }
-  /* line 520, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .username {
     text-align: center;
-    margin: 90px 0 -90px 0;
-    font-size: 24px;
+    margin: 70px 0 -90px 0;
+    font-size: 1.5em;
     color: #474747;
     font-family: 'print';
+    padding-top: 80px;
   }
-  /* line 527, ../scss/breakpoint/_768down.scss */
+  /* line 525, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .navi {
     text-align: center;
-    margin: 128px 0 90px 0;
+    margin: 110px 0 90px 0;
     font-size: 12px;
     color: #474747;
     font-family: flop;
   }
-  /* line 534, ../scss/breakpoint/_768down.scss */
+  /* line 532, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper table {
     position: absolute;
-    width: 150px;
-    margin: 20px 0 0 0;
-    left: 70%;
+    width: 100px;
+    left: 60%;
+    margin: 10px;
   }
-  /* line 539, ../scss/breakpoint/_768down.scss */
+  /* line 537, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper table td {
     text-align: center;
     padding-top: 10px;
     margin: 0;
-    font-size: 24px;
+    font-size: 1.5em;
     color: #474747;
     font-family: 'print';
   }
-  /* line 548, ../scss/breakpoint/_768down.scss */
+  /* line 546, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper table tr {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 1em;
     color: #bcbcb8;
     font-family: 'print';
   }
-  /* line 557, ../scss/breakpoint/_768down.scss */
+  /* line 555, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts {
     padding: 0;
   }
-  /* line 559, ../scss/breakpoint/_768down.scss */
+  /* line 557, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post {
     display: inline-block;
     margin: 0;
@@ -684,30 +682,39 @@
     border-top: 1px solid #bcbcb8;
     width: 100%;
   }
-  /* line 565, ../scss/breakpoint/_768down.scss */
+  /* line 563, ../scss/breakpoint/_768down.scss */
+  .sec4_wrapper .posts .each_post .date_like {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  /* line 567, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .date {
     margin: 40px 0 0 0;
     text-align: center;
     font-size: 18px;
-    color: #474747;
+    color: #bcbcb8;
     font-family: 'print';
   }
-  /* line 572, ../scss/breakpoint/_768down.scss */
+  /* line 574, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .title {
     text-align: center;
     font-size: 2em;
     color: #474747;
     font-family: logotype;
   }
-  /* line 577, ../scss/breakpoint/_768down.scss */
+  /* line 579, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .title a {
     text-decoration: none;
   }
-  /* line 580, ../scss/breakpoint/_768down.scss */
+  /* line 582, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .title a:hover {
     background: none;
   }
-  /* line 584, ../scss/breakpoint/_768down.scss */
+  /* line 585, ../scss/breakpoint/_768down.scss */
+  .sec4_wrapper .posts .each_post .title a:visited {
+    color: #474747;
+  }
+  /* line 589, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .like {
     color: #474747;
     font-family: 'print';
@@ -715,11 +722,11 @@
     display: inline;
     padding: 0;
   }
-  /* line 590, ../scss/breakpoint/_768down.scss */
+  /* line 595, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .like li {
     display: inline-block;
   }
-  /* line 594, ../scss/breakpoint/_768down.scss */
+  /* line 599, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .content {
     color: #474747;
     font-family: ipaex;
@@ -729,83 +736,83 @@
     letter-spacing: 2px;
     line-height: 150%;
   }
-  /* line 603, ../scss/breakpoint/_768down.scss */
+  /* line 608, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .img_fav {
-    margin: 0 3px 0 0;
+    margin: 0;
     width: 15px;
     height: 15px;
     padding: 3px 0 0 0;
     outline: none;
   }
-  /* line 610, ../scss/breakpoint/_768down.scss */
+  /* line 615, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .edit {
     font-size: 12px;
     text-align: right;
   }
-  /* line 613, ../scss/breakpoint/_768down.scss */
+  /* line 618, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .edit a {
     text-decoration: none;
     color: #bcbcb8;
     font-family: flop;
     letter-spacing: 3px;
   }
-  /* line 619, ../scss/breakpoint/_768down.scss */
+  /* line 624, ../scss/breakpoint/_768down.scss */
   .sec4_wrapper .posts .each_post .edit a:hover {
     color: #cd5b51;
   }
 
   /* sec5 */
-  /* line 629, ../scss/breakpoint/_768down.scss */
+  /* line 634, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper {
     width: 90%;
     margin: 0 auto 0 auto;
   }
-  /* line 632, ../scss/breakpoint/_768down.scss */
+  /* line 637, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .head_navi {
     text-align: center;
     margin: 0 0 15px 0;
   }
-  /* line 635, ../scss/breakpoint/_768down.scss */
+  /* line 640, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .head_navi li {
     letter-spacing: 3px;
     margin: 0 3px;
     cursor: pointer;
     width: 100%;
   }
-  /* line 640, ../scss/breakpoint/_768down.scss */
+  /* line 645, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .head_navi li .logout {
     color: #474747;
     text-decoration: none;
   }
-  /* line 644, ../scss/breakpoint/_768down.scss */
+  /* line 649, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .head_navi li .logout:hover {
     background: none;
   }
-  /* line 648, ../scss/breakpoint/_768down.scss */
+  /* line 653, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .head_navi .selected {
     color: #cd5b51;
     cursor: default;
   }
-  /* line 653, ../scss/breakpoint/_768down.scss */
+  /* line 658, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper h1 {
     margin: 40px 0 40px 0;
     text-align: center;
     color: #474747;
     font-family: ipaex;
   }
-  /* line 659, ../scss/breakpoint/_768down.scss */
+  /* line 664, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper ul {
     padding: 0;
     margin: 60px 0 0 0;
   }
-  /* line 662, ../scss/breakpoint/_768down.scss */
+  /* line 667, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper ul li {
     padding: 0;
     margin: 15px 0 0 0;
     display: inline-block;
     width: 100%;
   }
-  /* line 667, ../scss/breakpoint/_768down.scss */
+  /* line 672, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper ul li .edit_pass {
     display: block;
     float: left;
@@ -816,7 +823,7 @@
     color: #474747;
     font-family: ipaex;
   }
-  /* line 677, ../scss/breakpoint/_768down.scss */
+  /* line 682, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper ul li span {
     display: block;
     float: left;
@@ -826,7 +833,7 @@
     color: #474747;
     font-family: ipaex;
   }
-  /* line 688, ../scss/breakpoint/_768down.scss */
+  /* line 693, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .form {
     width: 90%;
     height: 25px;
@@ -838,19 +845,19 @@
     color: #bcbcb8;
     font-size: 1.3em;
   }
-  /* line 699, ../scss/breakpoint/_768down.scss */
+  /* line 704, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .form:focus {
     border-color: #f3c363;
     outline: 0;
     color: #474747;
     font-size: 1.3em;
   }
-  /* line 705, ../scss/breakpoint/_768down.scss */
+  /* line 710, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .button {
     text-align: center;
     padding-top: 30px;
   }
-  /* line 709, ../scss/breakpoint/_768down.scss */
+  /* line 714, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .button_comp {
     padding: 15px 30px;
     text-align: center;
@@ -864,28 +871,28 @@
     border: 0;
     transition: background-color 1s ease;
   }
-  /* line 722, ../scss/breakpoint/_768down.scss */
+  /* line 727, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .button_comp:hover {
     background-color: #d9af59;
   }
-  /* line 725, ../scss/breakpoint/_768down.scss */
+  /* line 730, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .quit_magazine {
     margin: 15px 5% 30px 0;
     text-align: right;
     color: #474747;
     font-family: ipaex;
   }
-  /* line 733, ../scss/breakpoint/_768down.scss */
+  /* line 738, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .content_wrap {
     border-top: 1px solid #474747;
   }
-  /* line 736, ../scss/breakpoint/_768down.scss */
+  /* line 741, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .delete_wrap {
     text-align: right;
     margin: 30px 5% 0 0;
     letter-spacing: 3px;
   }
-  /* line 740, ../scss/breakpoint/_768down.scss */
+  /* line 745, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .delete_wrap .delete {
     text-decoration: none;
     color: #bcbcb8;
@@ -893,13 +900,13 @@
     font-size: 1em;
     margin-top: 5px;
   }
-  /* line 747, ../scss/breakpoint/_768down.scss */
+  /* line 752, ../scss/breakpoint/_768down.scss */
   .sec5_wrapper .delete_wrap .delete:hover {
     background: none;
   }
 
   /* sec6 style */
-  /* line 756, ../scss/breakpoint/_768down.scss */
+  /* line 761, ../scss/breakpoint/_768down.scss */
   .sec6 {
     margin: 0;
     background: url(../images/IMG_9268.JPG) no-repeat center center;
@@ -907,17 +914,17 @@
     background-size: cover;
     height: 900px;
   }
-  /* line 762, ../scss/breakpoint/_768down.scss */
+  /* line 767, ../scss/breakpoint/_768down.scss */
   .sec6 .register_bg {
     background-color: rgba(58, 32, 76, 0.5);
     height: 900px;
   }
-  /* line 766, ../scss/breakpoint/_768down.scss */
+  /* line 771, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper {
     width: 90%;
     margin: 0 auto 0 auto;
   }
-  /* line 769, ../scss/breakpoint/_768down.scss */
+  /* line 774, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .page_title {
     text-align: center;
     position: relative;
@@ -927,7 +934,7 @@
     color: #fcfbef;
     font-family: print;
   }
-  /* line 778, ../scss/breakpoint/_768down.scss */
+  /* line 783, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .page_title:after {
     position: absolute;
     bottom: 0;
@@ -938,7 +945,7 @@
     background: #fcfbef;
     content: '';
   }
-  /* line 788, ../scss/breakpoint/_768down.scss */
+  /* line 793, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .register_navi {
     margin: 60px 0 0 0;
     text-align: center;
@@ -946,19 +953,19 @@
     font-size: 1em;
     color: #fcfbef;
   }
-  /* line 795, ../scss/breakpoint/_768down.scss */
+  /* line 800, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper ul {
     padding: 0;
     margin: 30px 0 0 0;
   }
-  /* line 798, ../scss/breakpoint/_768down.scss */
+  /* line 803, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper ul li {
     padding: 0;
     margin: 15px 0 0 0;
     display: inline-block;
     width: 100%;
   }
-  /* line 803, ../scss/breakpoint/_768down.scss */
+  /* line 808, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper ul li span {
     display: block;
     float: left;
@@ -968,7 +975,7 @@
     letter-spacing: 2px;
     color: #fcfbef;
   }
-  /* line 814, ../scss/breakpoint/_768down.scss */
+  /* line 819, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .form {
     width: 90%;
     height: 25px;
@@ -981,14 +988,14 @@
     font-size: 1.2em;
     font-family: flop;
   }
-  /* line 826, ../scss/breakpoint/_768down.scss */
+  /* line 831, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .form:focus {
     border-color: #f3c363;
     outline: 0;
     color: #fcfbef;
     font-size: 1.2em;
   }
-  /* line 832, ../scss/breakpoint/_768down.scss */
+  /* line 837, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .agreement {
     padding: 10px 0 10px 0;
     text-align: right;
@@ -996,15 +1003,15 @@
     letter-spacing: 3px;
     font-family: ipaex;
   }
-  /* line 838, ../scss/breakpoint/_768down.scss */
+  /* line 843, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .agreement .agreement_link {
     color: #f3c363;
   }
-  /* line 842, ../scss/breakpoint/_768down.scss */
+  /* line 847, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .button {
     text-align: center;
   }
-  /* line 845, ../scss/breakpoint/_768down.scss */
+  /* line 850, ../scss/breakpoint/_768down.scss */
   .sec6 .register_wrapper .button_register {
     padding: 10px 30px;
     margin-top: 30px;
@@ -1027,7 +1034,7 @@
 @media only screen and (min-width: 768px) {
   /* line 1, ../scss/breakpoint/_base.scss */
   body {
-    background-color: #fcfbef;
+    background-color: #fbf7f1;
     margin: 0;
     padding: 0;
   }
@@ -1226,7 +1233,7 @@
   }
   /* line 173, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
   /* line 176, ../scss/breakpoint/_base.scss */
@@ -1263,18 +1270,19 @@
   .sec1 .sec1_wrapper .posted_at {
     font-family: 'print';
     font-size: 24px;
-    margin-top: 15px;
+    margin-top: 30px;
+    padding: 0;
   }
-  /* line 208, ../scss/breakpoint/_base.scss */
+  /* line 209, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper h1 {
     text-align: center;
-    color: #474747;
+    color: #3a204c;
     font-family: 'logotype';
-    font-size: 40px;
+    font-size: 47px;
     margin: 0;
     padding-top: 120px;
   }
-  /* line 216, ../scss/breakpoint/_base.scss */
+  /* line 217, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper textarea {
     width: 600px;
     height: 20px;
@@ -1287,21 +1295,23 @@
     left: 50%;
     color: #bcbcb8;
     transition: height 1s ease;
-    font-size: 1em;
+    font-size: 13px;
+    border: 2px solid #c9c9c4;
   }
-  /* line 231, ../scss/breakpoint/_base.scss */
+  /* line 233, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper textarea:focus {
+    border-color: #474747;
     height: 200px;
     outline: 0;
     color: #474747;
-    font-size: 1em;
+    font-size: 13px;
   }
-  /* line 237, ../scss/breakpoint/_base.scss */
+  /* line 240, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .button_post {
     margin-top: 15px;
     text-align: center;
   }
-  /* line 241, ../scss/breakpoint/_base.scss */
+  /* line 244, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .post {
     padding: 15px 40px;
     margin: 0;
@@ -1315,11 +1325,11 @@
     cursor: pointer;
     transition: background-color 0.8s ease;
   }
-  /* line 254, ../scss/breakpoint/_base.scss */
+  /* line 257, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .post:hover {
     background-color: #d9af59;
   }
-  /* line 257, ../scss/breakpoint/_base.scss */
+  /* line 260, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .sort {
     margin: 45px 0 0 0;
     padding: 0;
@@ -1327,50 +1337,51 @@
     text-align: center;
     border-bottom: 1px solid #bcbcb8;
   }
-  /* line 263, ../scss/breakpoint/_base.scss */
+  /* line 266, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .sort li {
     display: inline-block;
     margin: 30px 0 15px 0;
   }
-  /* line 266, ../scss/breakpoint/_base.scss */
+  /* line 269, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .sort li a {
     color: #474747;
     font-family: flop;
     text-decoration: none;
   }
-  /* line 271, ../scss/breakpoint/_base.scss */
+  /* line 274, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .sort li a:hover {
     background: none;
   }
-  /* line 276, ../scss/breakpoint/_base.scss */
+  /* line 279, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts {
     border-bottom: 1px solid #c9c9c4;
     margin-top: 40px;
+    padding-left: 20px;
   }
-  /* line 279, ../scss/breakpoint/_base.scss */
+  /* line 283, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li {
     display: inline;
   }
-  /* line 281, ../scss/breakpoint/_base.scss */
+  /* line 285, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li a {
     color: #474747;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'print';
     margin-right: 15px;
     text-decoration: none;
   }
-  /* line 288, ../scss/breakpoint/_base.scss */
+  /* line 292, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li a:hover {
     background: none;
   }
-  /* line 291, ../scss/breakpoint/_base.scss */
+  /* line 295, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li .img_fav {
     margin: 0 0 0 0;
     width: 15px;
     height: 15px;
     outline: none;
   }
-  /* line 297, ../scss/breakpoint/_base.scss */
+  /* line 301, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li .like {
     color: #474747;
     font-family: 'print';
@@ -1378,34 +1389,34 @@
     display: inline;
     padding: 0;
   }
-  /* line 303, ../scss/breakpoint/_base.scss */
+  /* line 307, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li .like li {
     display: inline-block;
   }
-  /* line 307, ../scss/breakpoint/_base.scss */
+  /* line 311, ../scss/breakpoint/_base.scss */
   .sec1 .sec1_wrapper .posts li .content {
     color: #474747;
     font-family: 'Yu Gothic';
-    font-size: 1em;
+    font-size: 15px;
     text-align: left;
     margin: 40px 40px 40px 0;
     padding: 0;
     letter-spacing: 2px;
-    line-height: 160%;
+    line-height: 180%;
   }
 
   /* sec2 style */
-  /* line 323, ../scss/breakpoint/_base.scss */
+  /* line 327, ../scss/breakpoint/_base.scss */
   .sec2 {
     background-color: #fbf7f1;
     margin: 0;
   }
-  /* line 326, ../scss/breakpoint/_base.scss */
+  /* line 330, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper {
-    width: 80%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
-  /* line 329, ../scss/breakpoint/_base.scss */
+  /* line 333, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper .page_title {
     text-align: center;
     position: relative;
@@ -1415,7 +1426,7 @@
     color: #474747;
     font-family: print;
   }
-  /* line 338, ../scss/breakpoint/_base.scss */
+  /* line 342, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper .page_title:after {
     position: absolute;
     bottom: 0;
@@ -1426,18 +1437,18 @@
     background: #cd5b51;
     content: '';
   }
-  /* line 348, ../scss/breakpoint/_base.scss */
+  /* line 352, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul {
     padding: 0;
     text-align: center;
     border-bottom: 1px solid #bcbcb8;
   }
-  /* line 352, ../scss/breakpoint/_base.scss */
+  /* line 356, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li {
     display: inline;
     color: #474747;
   }
-  /* line 355, ../scss/breakpoint/_base.scss */
+  /* line 359, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li .date {
     display: inline-block;
     margin: 0;
@@ -1445,11 +1456,11 @@
     padding: 45px 0 0 0;
     font-size: 25px;
   }
-  /* line 362, ../scss/breakpoint/_base.scss */
+  /* line 366, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li .theme_box {
     margin: 30px 0 0 0;
   }
-  /* line 365, ../scss/breakpoint/_base.scss */
+  /* line 369, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li .theme {
     display: inline-block;
     padding: 0;
@@ -1459,12 +1470,12 @@
     text-decoration: none;
     transition: color 0.5s;
   }
-  /* line 374, ../scss/breakpoint/_base.scss */
+  /* line 378, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li .theme:hover {
     color: #f3c363;
     background: none;
   }
-  /* line 378, ../scss/breakpoint/_base.scss */
+  /* line 382, ../scss/breakpoint/_base.scss */
   .sec2 .sec2_wrapper ul li .post_number {
     text-align: center;
     padding: 15px 0 30px 0;
@@ -1473,24 +1484,24 @@
   }
 
   /* sec3 style */
-  /* line 392, ../scss/breakpoint/_base.scss */
+  /* line 396, ../scss/breakpoint/_base.scss */
   .sec3 {
     background-color: #fbf7f1;
     margin: 0;
     position: relative;
   }
-  /* line 396, ../scss/breakpoint/_base.scss */
+  /* line 400, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper:after {
     content: "";
     display: block;
     clear: both;
   }
-  /* line 401, ../scss/breakpoint/_base.scss */
+  /* line 405, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
-  /* line 404, ../scss/breakpoint/_base.scss */
+  /* line 408, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .page_title {
     text-align: center;
     position: relative;
@@ -1500,7 +1511,7 @@
     color: #474747;
     font-family: 'print';
   }
-  /* line 413, ../scss/breakpoint/_base.scss */
+  /* line 417, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .page_title:after {
     position: absolute;
     bottom: 0;
@@ -1511,18 +1522,18 @@
     background: #198047;
     content: '';
   }
-  /* line 423, ../scss/breakpoint/_base.scss */
+  /* line 427, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper ul {
     padding: 0;
     margin: 60px 0 0 0;
   }
-  /* line 426, ../scss/breakpoint/_base.scss */
+  /* line 430, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper ul li {
     padding: 0;
     margin: 15px 0 0 0;
     display: inline-block;
   }
-  /* line 430, ../scss/breakpoint/_base.scss */
+  /* line 434, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper ul li span {
     display: block;
     float: left;
@@ -1533,7 +1544,7 @@
     letter-spacing: 2px;
     color: #474747;
   }
-  /* line 442, ../scss/breakpoint/_base.scss */
+  /* line 446, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .form {
     width: 600px;
     height: 30px;
@@ -1545,39 +1556,39 @@
     color: #bcbcb8;
     font-size: 30px;
   }
-  /* line 453, ../scss/breakpoint/_base.scss */
+  /* line 457, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .form:focus {
     border-color: #f3c363;
     outline: 0;
     color: #474747;
     font-size: 25px;
   }
-  /* line 459, ../scss/breakpoint/_base.scss */
+  /* line 463, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .auto_login {
     margin: 15px 5% 10px 0;
     text-align: right;
     color: #474747;
     font-family: flop;
   }
-  /* line 467, ../scss/breakpoint/_base.scss */
+  /* line 471, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .forget {
     margin: 0 5% 0 0;
     text-align: right;
     font-size: 12px;
     color: #bcbcb8;
   }
-  /* line 472, ../scss/breakpoint/_base.scss */
+  /* line 476, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .forget .forget_link {
     text-decoration: none;
     letter-spacing: 3px;
     color: #bcbcb8;
     font-family: flop;
   }
-  /* line 479, ../scss/breakpoint/_base.scss */
+  /* line 483, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .button {
     text-align: center;
   }
-  /* line 482, ../scss/breakpoint/_base.scss */
+  /* line 486, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .button_login {
     width: 200px;
     padding: 15px 40px;
@@ -1591,24 +1602,24 @@
     border: 0;
     transition: background-color 0.5s ease;
   }
-  /* line 495, ../scss/breakpoint/_base.scss */
+  /* line 499, ../scss/breakpoint/_base.scss */
   .sec3 .login_wrapper .button_login:hover {
     background-color: #d9af59;
   }
 
   /* sec4 style */
-  /* line 503, ../scss/breakpoint/_base.scss */
+  /* line 507, ../scss/breakpoint/_base.scss */
   .sec4_wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
-  /* line 506, ../scss/breakpoint/_base.scss */
+  /* line 510, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .manage {
     width: 100px;
     position: absolute;
-    padding: 15px 40px;
+    padding: 10px 30px;
     margin: 20px 0 90px -50px;
-    left: 20%;
+    left: 25%;
     text-align: center;
     background-color: #f3c363;
     text-decoration: none;
@@ -1619,11 +1630,11 @@
     border: 0;
     transition: background-color 1s ease;
   }
-  /* line 522, ../scss/breakpoint/_base.scss */
+  /* line 526, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .manage:hover {
     background-color: #d9af59;
   }
-  /* line 525, ../scss/breakpoint/_base.scss */
+  /* line 529, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .username {
     text-align: center;
     margin: 90px 0 -90px 0;
@@ -1631,22 +1642,22 @@
     color: #474747;
     font-family: 'print';
   }
-  /* line 532, ../scss/breakpoint/_base.scss */
+  /* line 536, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .navi {
     text-align: center;
-    margin: 128px 0 90px 0;
+    margin: 125px 0 90px 0;
     font-size: 12px;
     color: #474747;
     font-family: flop;
   }
-  /* line 539, ../scss/breakpoint/_base.scss */
+  /* line 543, ../scss/breakpoint/_base.scss */
   .sec4_wrapper table {
     position: absolute;
     width: 150px;
     margin: 20px 0 0 0;
-    left: 70%;
+    left: 68%;
   }
-  /* line 544, ../scss/breakpoint/_base.scss */
+  /* line 548, ../scss/breakpoint/_base.scss */
   .sec4_wrapper table td {
     text-align: center;
     padding-top: 10px;
@@ -1655,7 +1666,7 @@
     color: #474747;
     font-family: 'print';
   }
-  /* line 553, ../scss/breakpoint/_base.scss */
+  /* line 557, ../scss/breakpoint/_base.scss */
   .sec4_wrapper table tr {
     margin: 0;
     padding: 0;
@@ -1663,11 +1674,11 @@
     color: #bcbcb8;
     font-family: 'print';
   }
-  /* line 562, ../scss/breakpoint/_base.scss */
+  /* line 566, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts {
     padding: 0;
   }
-  /* line 564, ../scss/breakpoint/_base.scss */
+  /* line 568, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post {
     display: inline-block;
     margin: 0;
@@ -1675,31 +1686,40 @@
     border-top: 1px solid #bcbcb8;
     width: 100%;
   }
-  /* line 570, ../scss/breakpoint/_base.scss */
+  /* line 574, ../scss/breakpoint/_base.scss */
+  .sec4_wrapper .posts .each_post .date_like {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  /* line 578, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .date {
     margin: 40px 0 0 0;
     text-align: center;
     font-size: 18px;
-    color: #474747;
+    color: #bcbcb8;
     font-family: 'print';
   }
-  /* line 577, ../scss/breakpoint/_base.scss */
+  /* line 585, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .title {
     text-align: center;
     font-size: 24px;
     color: #474747;
     font-family: logotype;
   }
-  /* line 582, ../scss/breakpoint/_base.scss */
+  /* line 590, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .title a {
     text-decoration: none;
   }
-  /* line 585, ../scss/breakpoint/_base.scss */
+  /* line 593, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .title a:hover {
     background: none;
     color: #474747;
   }
-  /* line 590, ../scss/breakpoint/_base.scss */
+  /* line 597, ../scss/breakpoint/_base.scss */
+  .sec4_wrapper .posts .each_post .title a:visited {
+    color: #474747;
+  }
+  /* line 601, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .like {
     color: #474747;
     font-family: 'print';
@@ -1707,95 +1727,99 @@
     display: inline;
     padding: 0;
   }
-  /* line 596, ../scss/breakpoint/_base.scss */
+  /* line 607, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .like li {
     display: inline-block;
   }
-  /* line 600, ../scss/breakpoint/_base.scss */
+  /* line 611, ../scss/breakpoint/_base.scss */
+  .sec4_wrapper .posts .each_post .content_wrap {
+    margin: 0 auto;
+    width: 80%;
+  }
+  /* line 615, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .content {
     color: #474747;
     font-family: ipaex;
     font-size: 16px;
-    text-align: left;
-    margin: 20px 40px 40px 0;
+    margin: 20px 0 40px 0;
     letter-spacing: 2px;
     line-height: 150%;
   }
-  /* line 609, ../scss/breakpoint/_base.scss */
+  /* line 623, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .img_fav {
-    margin: 0 3px 0 0;
+    margin: 0;
     width: 15px;
     height: 15px;
-    padding: 3px 0 0 0;
+    padding: 1px 0 0 0;
     outline: none;
   }
-  /* line 616, ../scss/breakpoint/_base.scss */
+  /* line 630, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .edit {
     font-size: 12px;
     text-align: right;
   }
-  /* line 619, ../scss/breakpoint/_base.scss */
+  /* line 633, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .edit a {
     text-decoration: none;
     color: #bcbcb8;
     font-family: flop;
     letter-spacing: 3px;
   }
-  /* line 625, ../scss/breakpoint/_base.scss */
+  /* line 639, ../scss/breakpoint/_base.scss */
   .sec4_wrapper .posts .each_post .edit a:hover {
     color: #cd5b51;
   }
 
   /* sec5 */
-  /* line 635, ../scss/breakpoint/_base.scss */
+  /* line 649, ../scss/breakpoint/_base.scss */
   .sec5_wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
-  /* line 638, ../scss/breakpoint/_base.scss */
+  /* line 652, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .head_navi {
     text-align: center;
     margin: 0 0 15px 0;
   }
-  /* line 641, ../scss/breakpoint/_base.scss */
+  /* line 655, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .head_navi li {
     letter-spacing: 3px;
     margin: 0 3px;
     cursor: pointer;
   }
-  /* line 645, ../scss/breakpoint/_base.scss */
+  /* line 659, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .head_navi li .logout {
     color: #474747;
     text-decoration: none;
   }
-  /* line 649, ../scss/breakpoint/_base.scss */
+  /* line 663, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .head_navi li .logout:hover {
     background: none;
   }
-  /* line 653, ../scss/breakpoint/_base.scss */
+  /* line 667, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .head_navi .selected {
     color: #cd5b51;
     cursor: default;
   }
-  /* line 658, ../scss/breakpoint/_base.scss */
+  /* line 672, ../scss/breakpoint/_base.scss */
   .sec5_wrapper h1 {
     margin: 30px 0 60px 0;
     text-align: center;
     color: #474747;
     font-family: ipaex;
   }
-  /* line 664, ../scss/breakpoint/_base.scss */
+  /* line 678, ../scss/breakpoint/_base.scss */
   .sec5_wrapper ul {
     padding: 0;
     margin: 60px 0 0 0;
   }
-  /* line 667, ../scss/breakpoint/_base.scss */
+  /* line 681, ../scss/breakpoint/_base.scss */
   .sec5_wrapper ul li {
     padding: 0;
     margin: 15px 0 0 0;
     display: inline-block;
   }
-  /* line 671, ../scss/breakpoint/_base.scss */
+  /* line 685, ../scss/breakpoint/_base.scss */
   .sec5_wrapper ul li .edit_pass {
     display: block;
     float: left;
@@ -1806,7 +1830,7 @@
     color: #474747;
     font-family: ipaex;
   }
-  /* line 681, ../scss/breakpoint/_base.scss */
+  /* line 695, ../scss/breakpoint/_base.scss */
   .sec5_wrapper ul li span {
     display: block;
     float: left;
@@ -1817,7 +1841,7 @@
     color: #474747;
     font-family: ipaex;
   }
-  /* line 693, ../scss/breakpoint/_base.scss */
+  /* line 707, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .form {
     width: 600px;
     height: 30px;
@@ -1829,19 +1853,19 @@
     color: #bcbcb8;
     font-size: 25px;
   }
-  /* line 704, ../scss/breakpoint/_base.scss */
+  /* line 718, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .form:focus {
     border-color: #f3c363;
     outline: 0;
     color: #474747;
     font-size: 25px;
   }
-  /* line 710, ../scss/breakpoint/_base.scss */
+  /* line 724, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .button {
     text-align: center;
     padding-top: 30px;
   }
-  /* line 714, ../scss/breakpoint/_base.scss */
+  /* line 728, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .button_comp {
     width: 200px;
     padding: 15px 40px;
@@ -1856,28 +1880,28 @@
     border: 0;
     transition: background-color 1s ease;
   }
-  /* line 728, ../scss/breakpoint/_base.scss */
+  /* line 742, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .button_comp:hover {
     background-color: #d9af59;
   }
-  /* line 731, ../scss/breakpoint/_base.scss */
+  /* line 745, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .quit_magazine {
     margin: 15px 5% 30px 0;
     text-align: right;
     color: #474747;
     font-family: ipaex;
   }
-  /* line 739, ../scss/breakpoint/_base.scss */
+  /* line 753, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .content_wrap {
     border-top: 1px solid #474747;
   }
-  /* line 742, ../scss/breakpoint/_base.scss */
+  /* line 756, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .delete_wrap {
     text-align: right;
     margin: 0 5% 0 0;
     letter-spacing: 3px;
   }
-  /* line 746, ../scss/breakpoint/_base.scss */
+  /* line 760, ../scss/breakpoint/_base.scss */
   .sec5_wrapper .delete_wrap .delete {
     text-decoration: none;
     color: #bcbcb8;
@@ -1886,7 +1910,7 @@
   }
 
   /* sec6 style */
-  /* line 758, ../scss/breakpoint/_base.scss */
+  /* line 772, ../scss/breakpoint/_base.scss */
   .sec6 {
     margin: 0;
     background: url(../images/IMG_9268.JPG) no-repeat center center;
@@ -1894,17 +1918,17 @@
     background-size: cover;
     height: 900px;
   }
-  /* line 764, ../scss/breakpoint/_base.scss */
+  /* line 778, ../scss/breakpoint/_base.scss */
   .sec6 .register_bg {
     background-color: rgba(58, 32, 76, 0.5);
     height: 900px;
   }
-  /* line 768, ../scss/breakpoint/_base.scss */
+  /* line 782, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto 0 auto;
   }
-  /* line 771, ../scss/breakpoint/_base.scss */
+  /* line 785, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .page_title {
     text-align: center;
     position: relative;
@@ -1914,7 +1938,7 @@
     color: #fcfbef;
     font-family: print;
   }
-  /* line 780, ../scss/breakpoint/_base.scss */
+  /* line 794, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .page_title:after {
     position: absolute;
     bottom: 0;
@@ -1925,7 +1949,7 @@
     background: #fcfbef;
     content: '';
   }
-  /* line 790, ../scss/breakpoint/_base.scss */
+  /* line 804, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .register_navi {
     margin: 60px 0 0 0;
     text-align: center;
@@ -1933,18 +1957,18 @@
     font-size: 16px;
     color: #fcfbef;
   }
-  /* line 797, ../scss/breakpoint/_base.scss */
+  /* line 811, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper ul {
     padding: 0;
     margin: 30px 0 0 0;
   }
-  /* line 800, ../scss/breakpoint/_base.scss */
+  /* line 814, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper ul li {
     padding: 0;
     margin: 15px 0 0 0;
     display: inline-block;
   }
-  /* line 804, ../scss/breakpoint/_base.scss */
+  /* line 818, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper ul li span {
     display: block;
     float: left;
@@ -1955,7 +1979,7 @@
     letter-spacing: 2px;
     color: #fcfbef;
   }
-  /* line 816, ../scss/breakpoint/_base.scss */
+  /* line 830, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .form {
     width: 600px;
     height: 30px;
@@ -1968,14 +1992,14 @@
     font-size: 16px;
     font-family: flop;
   }
-  /* line 828, ../scss/breakpoint/_base.scss */
+  /* line 842, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .form:focus {
     border-color: #f3c363;
     outline: 0;
     color: #fcfbef;
     font-size: 25px;
   }
-  /* line 834, ../scss/breakpoint/_base.scss */
+  /* line 848, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .agreement {
     padding: 10px 0 10px 0;
     text-align: right;
@@ -1983,15 +2007,15 @@
     letter-spacing: 3px;
     font-family: ipaex;
   }
-  /* line 840, ../scss/breakpoint/_base.scss */
+  /* line 854, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .agreement .agreement_link {
     color: #f3c363;
   }
-  /* line 844, ../scss/breakpoint/_base.scss */
+  /* line 858, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .button {
     text-align: center;
   }
-  /* line 847, ../scss/breakpoint/_base.scss */
+  /* line 861, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .button_register {
     width: 200px;
     padding: 15px 40px;
@@ -2006,7 +2030,7 @@
     border: 0;
     transition: background-color 0.5s ease;
   }
-  /* line 861, ../scss/breakpoint/_base.scss */
+  /* line 875, ../scss/breakpoint/_base.scss */
   .sec6 .register_wrapper .button_register:hover {
     background-color: #d9af59;
   }

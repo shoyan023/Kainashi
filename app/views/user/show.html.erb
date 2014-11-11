@@ -1,4 +1,5 @@
   <div class="sec4_wrapper">
+  <div class="for_mobile">
     <% if current_user == @users %>
       <%= link_to 'アカウント管理', edit_user_registration_path, :class => 'manage' %>
     <% end %>
@@ -14,12 +15,13 @@
      </table>
      <p class="username"><%= @users.username %></p>
      <p class="navi">さんのマイページ</p>
-
+  </div>
 <ul class="posts">
 <li class="each_post">
 <% @posts.each do |post| %>
-  <p class="date"><%= post.updated_at %></p>
   <p class="title"><%= link_to post.theme.name, theme_path(post.theme) %></p>
+  <div class="date_like">
+  <span class="date"><%= post.updated_at %></span>
   <ul class="like">
     <li>
       <%= form_for @star, :remote => true do |f| %>
@@ -37,13 +39,16 @@
       <%= post.stars.count %>
     </li>
   </ul>
-  <p class="content"><%= post.content %></p>
+  </div>
+  <div class="content_wrap">
+    <p class="content"><%= post.content %></p>
   <% if current_user == @users %>
   <p class="edit">
     <%= link_to '編集', edit_post_path(post) %> |
     <%= link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
   <% end %>
+  </div>
 <% end %>
 </li>
 
