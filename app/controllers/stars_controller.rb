@@ -19,7 +19,7 @@ class StarsController < ApplicationController
   def create
     @star = Star.new(star_params)
     if @star.save
-      redirect_to @star, notice: "お気に入り登録完了"
+      redirect_to :back, notice: "お気に入り登録完了"
     else
       render 'home#index'
     end

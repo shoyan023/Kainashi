@@ -17,7 +17,7 @@
 
 <ul class="posts">
 <li class="each_post">
-<% @users.posts.each do |post| %>
+<% @posts.each do |post| %>
   <p class="date"><%= post.updated_at %></p>
   <p class="title"><%= link_to post.theme.name, theme_path(post.theme) %></p>
   <ul class="like">
@@ -35,7 +35,7 @@
     </li>
     <li>
       <%= post.stars.count %>
-    </li>   
+    </li>
   </ul>
   <p class="content"><%= post.content %></p>
   <% if current_user == @users %>

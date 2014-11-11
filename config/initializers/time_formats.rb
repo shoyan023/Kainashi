@@ -1,0 +1,5 @@
+Time::DATE_FORMATS[:default] = '%m. %d. %a'
+Time::DATE_FORMATS[:datetime] = '%m. %d. %a'
+Time::DATE_FORMATS[:date] = '%m. %d. %a'
+Time::DATE_FORMATS[:time] = '%H:%M:%S'
+Date::DATE_FORMATS[:default] = '%m. %d. %a'

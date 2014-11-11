@@ -4,6 +4,7 @@ class UserController < ApplicationController
 
   def show
     @users = User.find(params[:id])
+    @posts = @users.posts.order("id DESC")
     @star = Star.new  #新規ファボ作成
   end
 

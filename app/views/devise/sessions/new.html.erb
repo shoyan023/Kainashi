@@ -2,6 +2,10 @@
   <div class="login_wrapper">
     <p class="page_title">LOGIN</p>
 
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 <ul>
