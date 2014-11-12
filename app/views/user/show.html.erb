@@ -1,5 +1,4 @@
   <div class="sec4_wrapper">
-  <div class="for_mobile">
     <% if current_user == @users %>
       <%= link_to 'アカウント管理', edit_user_registration_path, :class => 'manage' %>
     <% end %>
@@ -15,7 +14,6 @@
      </table>
      <p class="username"><%= @users.username %></p>
      <p class="navi">さんのマイページ</p>
-  </div>
 <ul class="posts">
 <li class="each_post">
 <% @posts.each do |post| %>
